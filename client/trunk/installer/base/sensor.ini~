@@ -1,0 +1,70 @@
+  [Settings]
+  NumFields=8
+  
+  [Field 1]
+  Type=Label
+  Left=10
+  Top=5
+  Right=50
+  Bottom=15
+  Flags=GROUP|NOTABSTOP
+  Text=Sensor Name
+  
+  [Field 2]
+  Type=Label
+  Left=10
+  Top=25
+  Right=50
+  Bottom=35
+  Flags=GROUP|NOTABSTOP
+  Text=Sensor IP
+  
+  [Field 3]
+  Type=Label
+  Left=10
+  Top=45
+  Right=50
+  Bottom=55
+  Flags=GROUP|NOTABSTOP
+  Text=Sensor Port
+
+  [Field 4]
+  Type=Label
+  Left=10
+  Top=85
+  Right=65
+  Bottom=95 
+  Flags=GROUP|NOTABSTOP
+  Text=Sieve Listen Port
+  
+  [Field 5]
+  Type=Text
+  Left=70
+  Top=3
+  Right=300
+  Bottom=15
+  State=RemoteSensor
+  
+  [Field 6]
+  Type=Text
+  Left=70
+  Top=23
+  Right=300
+  Bottom=35
+  State=128.238.35.91
+  
+  [Field 7]
+  Type=Text
+  Left=70
+  Top=43
+  Right=300
+  Bottom=55
+  State=4188
+
+  [Field 8]
+  Type=Text
+  Left=70
+  Top=83
+  Right=300
+  Bottom=95
+  State=4185

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment/>
+<entry key="profiler.attach.remote">false</entry>
+<entry key="profiler.attach.server.type"/>
+<entry key="profiler.attach.working.dir"/>
+<entry key="profiler.attach.host.os">Windows</entry>
+<entry key="profiler.attach.direct">true</entry>
+<entry key="profiler.attach.target.type">Application</entry>
+<entry key="profiler.attach.host"/>
+<entry key="profiler.attach.ctrl.break">true</entry>
+</properties>

@@ -1,0 +1,2 @@
+#mysql com.mysql.jdbc.Driver F:\NABS\src\client\trunk\shared\libraries\mysql-connector-java-3.1.10-bin.jar
+#postgresql org.postgresql.Driver F:\NABS\src\client\trunk\shared\libraries\postgresql-8.2-504.jdbc3.jar

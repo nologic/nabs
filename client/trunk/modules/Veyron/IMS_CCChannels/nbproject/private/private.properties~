@@ -1,0 +1,12 @@
+application.args=
+do.depend=false
+do.jar=true
+file.reference.log4j-1.2.14.jar=..\\..\\..\\shared\\libraries\\log4j-1.2.14.jar
+javac.debug=true
+javadoc.preview=true
+jaxws.endorsed.dir=C:\\JSDK\\netbeans-5.5.1\\ide7\\modules\\ext\\jaxws21\\api
+project.IMS_Core=..\\..\\..\\modules\\Veyron\\IMS_Core
+project.Messages=F:\\NABS\\src\\client\\trunk\\shared\\messages
+project.ModuleAPI=..\\..\\..\\shared\\ModuleAPI
+project.utilities=..\\..\\..\\shared\\utilities
+user.properties.file=C:\\Documents and Settings\\mike\\.netbeans\\5.5.1\\build.properties

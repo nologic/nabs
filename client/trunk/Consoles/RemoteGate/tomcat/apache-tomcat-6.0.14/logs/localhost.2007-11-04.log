@@ -1,0 +1,345 @@
+Nov 4, 2007 10:26:00 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:26:00 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:26:00 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:26:00 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:26:01 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.ContextListener'
+Nov 4, 2007 10:26:01 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.SessionListener'
+Nov 4, 2007 10:26:01 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:26:01 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Nov 4, 2007 10:26:01 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Nov 4, 2007 10:26:01 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:26:01 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Compression Filter'
+Nov 4, 2007 10:26:01 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Path Mapped Filter'
+Nov 4, 2007 10:26:01 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Servlet Mapped Filter'
+Nov 4, 2007 10:26:01 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Set Character Encoding'
+Nov 4, 2007 10:26:01 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Request Dumper Filter'
+Nov 4, 2007 10:26:01 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:26:01 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:26:28 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.ContextListener'
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.SessionListener'
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Compression Filter'
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Path Mapped Filter'
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Servlet Mapped Filter'
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Set Character Encoding'
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Request Dumper Filter'
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:27:36 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:27:50 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.ContextListener'
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.SessionListener'
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Compression Filter'
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Path Mapped Filter'
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Servlet Mapped Filter'
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Set Character Encoding'
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Request Dumper Filter'
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:28:50 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:30:00 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.ContextListener'
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.SessionListener'
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Compression Filter'
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Path Mapped Filter'
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Servlet Mapped Filter'
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Set Character Encoding'
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Request Dumper Filter'
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:48:56 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:51:10 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Nov 4, 2007 10:51:10 PM org.apache.catalina.session.StandardSession writeObject
+FINE: writeObject() storing session C55CE6F70597432586C99F2FB0566F5C
+Nov 4, 2007 10:51:10 PM org.apache.catalina.session.StandardSession writeObject
+FINE:   storing attribute 'sieve' with value 'Sieve'
+Nov 4, 2007 10:51:12 PM org.apache.catalina.session.StandardSession readObject
+FINE: readObject() loading session C55CE6F70597432586C99F2FB0566F5C
+Nov 4, 2007 10:51:12 PM org.apache.catalina.session.StandardSession readObject
+FINE:   loading attribute 'sieve' with value 'Sieve'
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.ContextListener'
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.SessionListener'
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Compression Filter'
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Path Mapped Filter'
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Servlet Mapped Filter'
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Set Character Encoding'
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Request Dumper Filter'
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:51:12 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:51:43 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Nov 4, 2007 10:51:43 PM org.apache.catalina.session.StandardSession writeObject
+FINE: writeObject() storing session C55CE6F70597432586C99F2FB0566F5C
+Nov 4, 2007 10:51:43 PM org.apache.catalina.session.StandardSession writeObject
+FINE:   storing attribute 'sieve' with value 'Sieve'
+Nov 4, 2007 10:55:06 PM org.apache.catalina.session.StandardSession readObject
+FINE: readObject() loading session C55CE6F70597432586C99F2FB0566F5C
+Nov 4, 2007 10:55:06 PM org.apache.catalina.session.StandardSession readObject
+FINE:   loading attribute 'sieve' with value 'Sieve'
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.ContextListener'
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.SessionListener'
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Compression Filter'
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Path Mapped Filter'
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Servlet Mapped Filter'
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Set Character Encoding'
+Nov 4, 2007 10:55:06 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Request Dumper Filter'
+Nov 4, 2007 10:55:07 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 10:55:07 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 11:04:15 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Nov 4, 2007 11:04:15 PM org.apache.catalina.session.StandardSession writeObject
+FINE: writeObject() storing session C55CE6F70597432586C99F2FB0566F5C
+Nov 4, 2007 11:04:15 PM org.apache.catalina.session.StandardSession writeObject
+FINE:   storing attribute 'sieve' with value 'Sieve'
+Nov 4, 2007 11:04:18 PM org.apache.catalina.session.StandardSession readObject
+FINE: readObject() loading session C55CE6F70597432586C99F2FB0566F5C
+Nov 4, 2007 11:04:18 PM org.apache.catalina.session.StandardSession readObject
+FINE:   loading attribute 'sieve' with value 'Sieve'
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.ContextListener'
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.SessionListener'
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Compression Filter'
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Path Mapped Filter'
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Servlet Mapped Filter'
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Set Character Encoding'
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Request Dumper Filter'
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 11:04:18 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 11:06:31 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Nov 4, 2007 11:06:31 PM org.apache.catalina.session.StandardSession writeObject
+FINE: writeObject() storing session C55CE6F70597432586C99F2FB0566F5C
+Nov 4, 2007 11:06:31 PM org.apache.catalina.session.StandardSession writeObject
+FINE:   storing attribute 'sieve' with value 'Sieve'
+Nov 4, 2007 11:06:33 PM org.apache.catalina.session.StandardSession readObject
+FINE: readObject() loading session C55CE6F70597432586C99F2FB0566F5C
+Nov 4, 2007 11:06:33 PM org.apache.catalina.session.StandardSession readObject
+FINE:   loading attribute 'sieve' with value 'Sieve'
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.ContextListener'
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.SessionListener'
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Compression Filter'
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Path Mapped Filter'
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Servlet Mapped Filter'
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Set Character Encoding'
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Request Dumper Filter'
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Nov 4, 2007 11:06:33 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Nov 4, 2007 11:07:20 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet ModulePortal threw exception
+java.lang.NullPointerException
+	at eunomia.plugin.gui.lossyHistogram.Main.getProperty(Main.java:410)
+	at eunomia.module.ProcFrontendModule.getProperty(ProcFrontendModule.java:124)
+	at eunomia.web.ModulePortal.processRequest(ModulePortal.java:46)
+	at eunomia.web.ModulePortal.doGet(ModulePortal.java:88)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:690)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Thread.java:619)
+Nov 4, 2007 11:08:07 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Nov 4, 2007 11:08:07 PM org.apache.catalina.session.StandardSession writeObject
+FINE: writeObject() storing session C55CE6F70597432586C99F2FB0566F5C
+Nov 4, 2007 11:08:07 PM org.apache.catalina.session.StandardSession writeObject
+FINE:   storing attribute 'sieve' with value 'Sieve'

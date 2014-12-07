@@ -1,0 +1,6 @@
+This is a sample DNS Flow parser. It gets input from stdin, and prints flow
+information to stdout.
+
+Sample usages:
+nc server port | readDNS
+cat DNSflows.netcatdump | readDNS

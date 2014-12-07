@@ -1,0 +1,9 @@
+eunomia
+eunomia.gui
+eunomia.gui.archival
+eunomia.gui.realtime
+eunomia.gui.realtime.receptorAdmin
+eunomia.gui.realtime.receptorAdmin.editors
+eunomia.shell
+eunomia.shell.nabsh
+scripts

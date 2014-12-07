@@ -1,0 +1,62 @@
+import org.apache.log4j.Logger;
+import eunomia.shell.nabsh.Nabsh;
+import eunomia.shell.Shell;
+
+Logger logger;
+Shell sh;
+
+lsRec() {
+    import eunomia.core.managers.ReceptorManager;
+    import java.util.Iterator;
+
+    Iterator it = ReceptorManager.ins.getReceptors().iterator();
+    while(it.hasNext()){
+        System.out.println(it.next());
+    }
+}
+
+connect(String rec, String user, String pass){
+    import eunomia.core.managers.ReceptorManager;
+    import eunomia.core.receptor.Receptor;
+
+    Receptor r = ReceptorManager.ins.getByName(rec);
+    if(r == null){
+        System.out.print("Receptor not found: " + rec);
+    } else {
+        r.setCredentials(user, pass);
+        logger.info(receptor + " -> Connecting...");
+        try {
+            r.connect();
+        } catch (Exception e){
+            logger.info(e.getMessage());
+        }
+    }
+}
+
+disconnect(String rec){
+    import eunomia.core.managers.ReceptorManager;
+    import eunomia.core.receptor.Receptor;
+
+    Receptor r = ReceptorManager.ins.getByName(rec);
+    if(r == null){
+        System.out.print("Receptor not found: " + rec);
+    } else {
+        r.disconnect();
+    }
+}
+
+su(String rec, String pass){
+    import eunomia.core.receptor.Receptor;
+    import eunomia.core.managers.ReceptorManager;
+
+    Receptor r = ReceptorManager.ins.getByName(rec);
+    if(r == null){
+        System.out.print("Receptor not found: " + rec);
+    } else {
+        r.autheticateRoot(pass);
+    }
+}
+
+exit(){
+    System.exit(0);
+}

@@ -1,0 +1,45 @@
+Required Features:
+------------------
+- Improve send buffer implementation
+	* bit operations should be improved
+	* send buffers should keep track of their own memory range
+		- given a pointer to a chunk they should be able to figure out the
+		owner of the chunk quickly. (use a range finding data structure)
+	* Need strategies to have send buffers filled continously without any holes
+		* Buffers with holes (flow records not ready to flush) makes it
+		difficult to flush the buffers en masse
+	* Support for unlimited chunks on a buffer
+
+- Inform Sieve of sensor's
+	* Endianness
+	* Sampled payload size
+	* Histogram boundary(?)
+
+Completed Features:
+-------------------
+- Send buffer implementation
+	* Rewrite/port flush_send_buffers()
+		-- figure out total flushable chunk
+			* if any then:
+				-- need to figure out the first flushable chunk
+				-- need to figure out the first non-flushable chunk
+				-- flush everything in between
+	* Use bitstring.h to implement bitvector
+	* Memory for flow records are managed by send buffers
+		- to facilitate bulk flushing without copying
+	* Implemented a less optimal send buffer
+	* Uses a send_buffer pointer on flow_content to identify owner of
+		flow_record (Stupid, I know!)
+- Complete implementation of NabsFlow V2
+	* Check to make sure vars are not over sized
+	* Static Histogram
+	* Put in preliminary data structures for NabsFlow V2
+	* Ensure compatibility with corresponding Sieve flow module
+	* Update packet/flow stats
+	* Update reaction time measuresments
+
+Dropped Features:
+-----------------
+- Windowed variance measurement of a flow's packet size and IAT in flow_record
+	- no room in the NabsFlow v2 structure
+	

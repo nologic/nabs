@@ -1,0 +1,103 @@
+/*
+ * Set up the static configurations. The cfg(String, String) or cfg(String, int)
+ * functions will accept key value pairs. Value could be either a String or an
+ * int. Once set these values cannot be changed after this script finishes 
+ * executing.
+ */
+
+// IMS Core module specific configurations.
+cfg("imsCore.dbDir", "F:/NABS/src/client/trunk/middleware/data_maps");
+cfg("imsCore.reset", "true"); // JUST FOR TESTING, this resets state every start up.
+
+/*
+ * db(String, String, String) will load the database drivers. Parameters are:
+ *  1 - Internal name you want to give the driver.
+ *  2 - Class name of the driver
+ *  3 - Path to the JAR file.
+ */
+db("mysql", "com.mysql.jdbc.Driver", "../shared/libraries/mysql-5.1.6.jar");
+db("postgresql", "org.postgresql.Driver", "../shared/libraries/postgresql-8.2-504.jdbc3.jar");
+
+/*
+ * lm(String) function will load a Eunomia module. Just specify the jar path and
+ * everything will be loaded automatically.
+ */
+//lm("../modules/NetworkPolicy/dist/NetworkPolicy.jar");
+lm("../modules/streamStatus/dist/streamStatus.jar");
+//lm("../modules/lossyHistogram/dist/lossyHistogram.jar");
+//lm("../modules/CustomerFeedback/dist/CustomerFeedback.jar");
+//lm("../modules/pieChart/dist/pieChart.jar");
+//lm("../modules/hostView/dist/hostView.jar");
+//lm("../modules/hostDetails/dist/hostDetails.jar");
+//lm("../modules/RecordCounter/dist/RecordCounter.jar");
+//lm("../modules/NABFlowV2Collector/dist/NABFlowV2Collector.jar");
+//lm("../modules/Atas/dist/Atas.jar");
+//lm("../modules/NetworkStatus/dist/NetworkStatus.jar");
+//lm("../modules/NABFlow/dist/NABFlow.jar");
+lm("../modules/NABFlowV2/dist/NABFlowV2.jar");
+lm("../modules/NEOFlow/dist/NEOFlow.jar");
+lm("../modules/Veyron/IMS_DNSFlow/dist/IMS_DNSFlow.jar");
+//lm("../modules/veyron/IMS_Darkspace/dist/IMS_Darkspace.jar");
+lm("../modules/veyron/IMS_CCChannels/dist/IMS_CCChannels.jar");
+//lm("../modules/veyron/IMS_Spammer/dist/IMS_Spammer.jar");
+//lm("../modules/veyron/IMS_SpreadingBot/dist/IMS_SpreadingBot.jar");
+lm("../modules/veyron/IMS_NETCollect/dist/IMS_NETCollect.jar");
+lm("../modules/veyron/IMS_DNSCollect/dist/IMS_DNSCollect.jar");
+lm("../modules/veyron/IMS_Core/dist/IMS_Core.jar");
+lm("../modules/veyron/IMS_Boot/dist/IMS_Boot.jar");
+lm("../shared/libraries/db-4.7.25.jar");
+lm("../shared/libraries/mysql-5.1.6.jar");
+//lm("../shared/libraries/jcommon-1.0.10.jar");
+//lm("../shared/libraries/jfreechart-1.0.5.jar");
+//lm("../modules/Veyron/IMS_ExampleProcAnlz/dist/IMS_ExampleProcAnlz.jar");
+lm("../modules/Veyron/IMS_Reporting/dist/IMS_Reporting.jar");
+
+/*
+ * If you would like to accept Eunomia front-end clients then specify the
+ * password file (where users' password hashes will be stored) and the port
+ * to listen on. To disable this the listener comment out both lines.
+ */
+passwd("passwd.nab");
+listen(4185);
+
+/*
+ * After all the initial things are are set up, Eunomia still needs to do some
+ * initialization before moving on. So call load() before running other scipts.
+ */
+load();
+
+/*
+ * Now you are free to run any general scripts: start modules, etc.
+ */
+System.setProperty("java.io.tmpdir", "F:/NABS/src/client/trunk/middleware/batch_tmp");
+//System.setProperty("sleepycat.db.libfile", "F:/NABS/src/client/trunk/shared/db/bin/libdb_java47.dll");
+
+startDB("mysql", "reporter_db", "127.0.0.1", 3306, "ims_reports", "reports", "reports");
+
+ReceptorAnalysisModule mod = startModule("bootIms", Descriptor.TYPE_ANLZ);
+mod.setProperty("net", "128.238.0.0/16");
+mod.setProperty("add_reporter", "reporter_db");
+//mod.setProperty("stat", "IMS_db.stat");
+//mod.setProperty("stat.fast", "true");
+
+/*
+ * Start Collection Modules
+ *   Comment these 2 lines out to make a purely analytical
+ *   instance
+ */ 
+startModule("netCollect", Descriptor.TYPE_PROC);
+startModule("dnsCollect", Descriptor.TYPE_PROC);
+
+startModule("imsSqlReport", Descriptor.TYPE_ANLZ);
+//startModule("ccChannels", Descriptor.TYPE_ANLZ);
+
+/* 
+ * Connect to some sensors.
+ */
+//print(connect("nabflow_laptop", "192.168.1.45", 9876, "NABFlowV2"));
+//print(connect("neoflow_local", "192.168.1.45", 9876, "NABFlowV2"));
+//print(connect("neoflow_replay", "128.238.35.91", 8888, "NEOFlow"));
+//print(connect("neoflow", "128.238.35.91", 8887, "NEOFlow"));
+//print(connect("dnsflow", "128.238.35.91", 8886, "DNSFlow"));
+//print(connect("flowsv2", "128.238.35.91", 9995, "NABFlowV2"));
+

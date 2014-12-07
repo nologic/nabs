@@ -1,0 +1,6 @@
+This is a sample Neoflow Flow parser. It gets input from stdin, and prints flow
+information to stdout.
+
+Sample usages:
+nc server port | readNeoflow
+cat DNSflows.netcatdump | readNeoflow

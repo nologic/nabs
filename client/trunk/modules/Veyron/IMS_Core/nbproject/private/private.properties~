@@ -1,0 +1,12 @@
+application.args=
+do.depend=false
+do.jar=true
+file.reference.db-4.7.25.jar=F:\\NABS\\src\\client\\trunk\\shared\\libraries\\db-4.7.25.jar
+file.reference.log4j-1.2.14.jar=..\\..\\..\\shared\\libraries\\log4j-1.2.14.jar
+file.reference.mysql-5.1.6.jar=..\\..\\..\\shared\\libraries\\mysql-5.1.6.jar
+javac.debug=true
+javadoc.preview=true
+project.Config=..\\..\\..\\shared\\config
+project.ModuleAPI=..\\..\\..\\shared\\ModuleAPI
+project.utilities=..\\..\\..\\shared\\utilities
+user.properties.file=/Users/justin/.netbeans/6.1/build.properties

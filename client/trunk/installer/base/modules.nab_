@@ -1,0 +1,11 @@
+# Modules definition file.
+modules\NABFlow.jar
+modules\NABFlowV2.jar
+modules\streamStatus.jar
+modules\lossyHistogram.jar
+modules\pieChart.jar
+modules\hostView.jar
+modules\hostDetails.jar
+modules\RecordCounter.jar 
+modules\NABFlowCollector.jar
+modules\NetworkPolicy.jar

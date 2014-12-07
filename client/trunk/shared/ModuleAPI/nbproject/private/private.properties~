@@ -1,0 +1,7 @@
+application.args=
+javac.debug=false
+javadoc.preview=true
+jaxws.endorsed.dir=C:\\JSDK\\NetBeans 6.0 M9\\java1\\modules\\ext\\jaxws21\\api
+project.Config=F:\\NABS\\src\\client\\trunk\\shared\\config
+project.Messages=..\\messages
+user.properties.file=C:\\Users\\mike\\.netbeans\\5.5\\build.properties

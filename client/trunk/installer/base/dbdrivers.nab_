@@ -1,0 +1,2 @@
+mysql com.mysql.jdbc.Driver db_drivers/mysql-connector-java-3.1.10-bin.jar
+postgresql org.postgresql.Driver db_drivers/postgresql-8.2-504.jdbc3.jar

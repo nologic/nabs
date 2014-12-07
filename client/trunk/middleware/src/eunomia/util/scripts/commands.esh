@@ -1,0 +1,119 @@
+import org.apache.log4j.Logger;
+import eunomia.data.*;
+import eunomia.managers.*;
+import eunomia.comm.*;
+import com.vivic.eunomia.module.*;
+import com.vivic.eunomia.module.receptor.*;
+import eunomia.receptor.*;
+import eunomia.messages.receptor.protocol.impl.*;
+import eunomia.messages.receptor.*;
+import eunomia.exception.*;
+
+Logger logger = Logger.getLogger("eunomia.scripting");
+logger.info("Eunomia Started");
+
+cfg(String k, int v) {
+    cfg(k, Integer.toString(v));
+}
+
+cfg(String k, String v) {
+    eunomia.EunomiaConfiguration.setValue(k, v);
+}
+
+lm(String path) {
+    File jarFile = new File(path);
+
+    if(jarFile.exists()){
+        try {
+            ModuleManager.v().getLinker().loadModule(jarFile);
+        } catch (DependencyFailureException e) {
+            logger.error("Unable to load module: " + jarFile + " (" + e.getMessage() + ")");
+        } catch (Throwable e){
+            logger.error("Invalid module '" + jarFile + "' - " + e.toString());
+            //e.printStackTrace();
+        }
+    } else {
+        logger.error("Jar not found: " + jarFile);
+    }
+}
+
+db(String name, String classname, String path) {
+    File jarFile = new File(path);
+
+    if(jarFile.exists()) {
+        try {
+            ModuleManager.v().getLinker().loadJDBCDriver(name, classname, new File(path));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    } else {
+        logger.error("Jar not found: " + jarFile);
+    }
+}
+
+load() {
+    eunomia.EunomiaConfiguration.lock();
+    eunomia.Main.load();
+}
+
+passwd(String path) {
+    // Start user manager
+    UserManager.initialize(path);
+}
+
+listen(int port) {
+    return ClientManager.init(port);
+}
+
+connect(String name) {
+    return connect(name, null, 0, null);
+}
+
+connect(String name, String ip, int port, String mod) {
+    FlowServer serv = ReceptorManager.v().getServerByName(name);
+
+    if(serv == null) {
+        if(mod == null || ip == null) {
+            return null;
+        }
+        
+        TCPProtocol proto = new TCPProtocol();
+        proto.setIp(ip);
+        proto.setPort(port);
+
+        serv = ReceptorManager.v().addServer(mod, proto, name);
+    }
+
+    ReceptorManager.v().connectServer(serv);
+
+    return serv;
+}
+
+startModule(String name, int type) {
+    ModuleHandle handle;
+
+    UserState state = StateManager.v().getState("root");
+
+    switch(type) {
+        case Descriptor.TYPE_PROC:
+            handle = state.startProcModule(name);
+            return ModuleManager.v().getProcessorModule(handle);
+
+        case Descriptor.TYPE_ANLZ:
+            handle = state.startAnlzModule(name);
+            return ModuleManager.v().getAnalysisModule(handle);
+    }
+
+    return null;
+}
+
+startDB(String type, String name, String ip, int port, String dbName, String username, String password) {
+    Database db = DatabaseManager.v().createDefaultDatabase(type, name);
+
+    db.setAddress(ip);
+    db.setPort(port);
+    db.setDatabaseName(dbName);
+    db.setCredentials(username, password);
+
+    return db;
+}

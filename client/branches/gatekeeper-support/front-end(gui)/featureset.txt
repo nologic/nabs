@@ -1,0 +1,82 @@
+GUI Related Features:
+=====================
+0) Two modes of operations
+	- real-time mode where we display data in real time
+	- archive-mode where the user can query the database for past events
+
+1) Visualization Plug-ins:
+	- in the beginning support bar, pie charts as plug-ins
+	- support for Excel type grid or summary display without any visuals
+	- make sure the graph APIs are extensible to other visualization
+	  plug-ins
+
+2) User Selectable Graph Axis:
+	- user should be able to select the X, Y, Z axis of graphs
+	- allow for definition and type of fields from the GUI
+		e.g. src_ip 	range	[0 -- 2^32]
+		     dst_port 	range	[0 -- 65536]
+		     packets  	int
+	- use this type information to draw graphs intelligently
+
+3) User Selectable Content Types/Colors:
+	- let the user specify the content types of flows and their colors
+	- have a color palette for selecting colors
+
+4) Control Channel GUI:
+	- a GUI to send requests, display results from the server such as
+	  status of the server, uptime, packet drops etc. also allow to run
+	  some maintenance tasks at the server like purge server database etc.
+
+
+Database & Query Features:
+==========================
+4) Database Setup and Management:
+	- if the database is in the same machine as the GUI provide a GUI to
+	setup the database from within the GUI.
+	- make this setup very user friendly
+
+5) Custom SQL Query:
+	- in the archive mode have a custom SQL query box where the user can
+	  enter any crazy SQL query she wishes
+	- display database names, table names, and column names to help the
+	  user build query. we don't want the user to remember these things
+	- display results as an Excel grid and allow user to select portions
+	  or entire grid to feed it into a visualization plug-in (graphs etc.)
+
+
+Nabs Document Features:
+=======================
+6) Nabs Document:
+	- a simple XML based document with following items embedded in it
+		- a graph or some image in PNG format
+		- keywords associated with the image above
+		- comments, a set of text comments
+		- query: SQL query that generated the results
+		- result dump, CSV type result dump
+
+7) Save, Open The Document:
+	- should be able to create/save the above document from within Nabs
+	- should be able to open and display appropriate stuff from a already
+	  created document.
+
+
+Monitoring & Alerts Features:
+=============================
+8) Create Custom Alerts:
+	- user should be able to create simple alerts like, when content-type
+	  X goes above Y limit show me an alert.
+
+9) Alert Display:
+	- ability to display alerts on screen
+	- ability to write alerts to a database
+	- query that database for history of alerts
+	
+
+Misc Features:
+==============
+	- Must play DVDs
+	- Should ask user whether she needs "Fries with that?"
+
+Signing off,
+Kulesh Shanmugasundaram.
+June 7, 2005.

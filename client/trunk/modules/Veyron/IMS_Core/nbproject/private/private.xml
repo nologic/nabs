@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/F:/NABS/src/client/trunk/modules/Veyron/IMS_Core/src/eunomia/Descriptor.java</file>
+        <file>file:/F:/NABS/src/client/trunk/modules/Veyron/IMS_Core/src/eunomia/module/receptor/libb/imsCore/Reporter.java</file>
+        <file>file:/F:/NABS/src/client/trunk/modules/Veyron/IMS_Core/src/eunomia/module/receptor/libb/imsCore/db/DatabaseStore.java</file>
+        <file>file:/F:/NABS/src/client/trunk/modules/Veyron/IMS_Core/src/eunomia/module/receptor/libb/imsCore/db/NetEnv.java</file>
+        <file>file:/F:/NABS/src/client/trunk/modules/Veyron/IMS_Core/src/eunomia/module/receptor/libb/imsCore/db/NetworkInserter.java</file>
+        <file>file:/F:/NABS/src/client/trunk/modules/Veyron/IMS_Core/src/eunomia/module/receptor/libb/imsCore/db/RollingDatabaseStore.java</file>
+        <file>file:/F:/NABS/src/client/trunk/modules/Veyron/IMS_Core/src/eunomia/module/receptor/libb/imsCore/db/bdb/BDBDataStore.java</file>
+        <file>file:/F:/NABS/src/client/trunk/modules/Veyron/IMS_Core/src/eunomia/module/receptor/libb/imsCore/db/bdb/ReadDatabase.java</file>
+        <file>file:/F:/NABS/src/client/trunk/modules/Veyron/IMS_Core/src/eunomia/module/receptor/libb/imsCore/db/bdb/WriteDatabase.java</file>
+        <file>file:/F:/NABS/src/client/trunk/modules/Veyron/IMS_Core/src/eunomia/module/receptor/libb/imsCore/util/ComponentRegistry.java</file>
+        <file>file:/F:/NABS/src/client/trunk/modules/Veyron/IMS_Core/src/eunomia/module/receptor/libb/imsCore/util/ComponentRegistryListener.java</file>
+    </open-files>
+</project-private>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment/>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-3">eunomia.receptor.LoadBalancer,getNext,()Leunomia/flow/FlowProcessor;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-2">eunomia.receptor.LoadBalancer,doneGetNext,(Leunomia/flow/FlowProcessor;)Leunomia/flow/FlowProcessor;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-1">eunomia.receptor.LoadBalancer,doMainThreadProc,(Leunomia/flow/FlowProcessor;Leunomia/flow/Flow;)Leunomia/flow/FlowProcessor;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-0">eunomia.receptor.LoadBalancer,notify,([Leunomia/flow/FlowProcessor;ILeunomia/flow/Flow;)Z</entry>
+<entry key="presets.cpufragment.profiler.settings.fragment.selection"/>
+<entry key="presets.cpupart.profiler.settings.instrumentation.root.methods.size">4</entry>
+</properties>

@@ -1,0 +1,5 @@
+application.args=
+javac.debug=true
+javadoc.preview=true
+project.utilities=F:\\NABS\\src\\client\\trunk\\shared\\utilities
+user.properties.file=C:\\Users\\mike\\.netbeans\\5.5\\build.properties

@@ -1,0 +1,8 @@
+<application-client>
+<ejb-ref>
+  <ejb-ref-name>SimpleBean</ejb-ref-name>
+  <ejb-ref-type>Session</ejb-ref-type>
+  <home>jca.simple.SimpleHome</home>
+  <remote>jca.simple.Simple</remote>
+</ejb-ref>
+</application-client>

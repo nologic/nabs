@@ -1,0 +1,270 @@
+\documentclass[titlepage,12pt]{article}
+
+%\usepackage[draft]{graphicx}
+\usepackage{graphicx}
+
+\usepackage{fullpage}
+\usepackage{listings}
+ 
+\usepackage[%
+%pdftitle={\TITLE}
+pdfauthor={Mikhail Sosonkin}, pdftex, colorlinks=true,
+linkcolor={black}, citecolor={black}, urlcolor={black}]{hyperref}
+
+\newcommand{\FIGURE}[5]{%
+\typeout{FIGURE: #2}
+\begin{figure}[#1]
+     \centerline{\resizebox{#3\linewidth}{!}{\includegraphics{#2}}}
+     \caption{#4}
+       \label{#5}
+       \end{figure}
+}
+
+\newcommand{\FULLFIGURE}[5]{%
+    \typeout{FIGURE: #2}
+    \begin{figure*}[#1]
+    \centerline{\resizebox{#3\linewidth}{!}{\includegraphics{#2}}}
+    \caption{#4}
+    \label{#5}
+    \end{figure*}
+}
+
+\newcommand{\PIC}[2]{\centerline{\resizebox{#1\linewidth}{!}{\includegraphics{#2}}} }
+
+\title{The Eunomia Client Design Description}
+\author{Mikhail Sosonkin\\
+Polytechnic University\\ 6 Metrotech Center\\ Brooklyn, NY 11201, U.S.A.\\
+\url{mike@isis.poly.edu}\\
+}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\clearpage
+
+\section{Introduction}
+\emph{Eunomia} is a client for the NABS server. NABS is a Network Abuse detection System designed to classify network traffic into their corresponding data types. On large scale networks the classification results can easily exceed a person's ability to process it without aid. Eunomia is designed to accept input from the server and present the results in a summarized representation. The client is able to show data in graphical form with ability to go backwards in time by traversing the database.
+
+\FIGURE{htb}
+       {images/overview.pdf}
+       {0.55}
+       {Overview of the System}
+       {F:intro}
+
+Figure~\ref{F:intro} shows a high level layout of the overall system. The client is responsible for connecting to the server and parsing it's output. The network data is captured by the server and classified. The classification results are then passed on to the client. It is the client's responsibity to parse the classification results, store them, and present in a convenient visual format. As shown by figure~\ref{F:intro2} the client is able to recieve classification results from multiple servers to provide the user with a single point of entry for analyzing the network traffic.
+
+\FIGURE{htb}
+       {images/overview2.pdf}
+       {0.55}
+       {System Overview (Client)}
+       {F:intro2}
+
+The client information flow structure is very simple. It is represented in figure~\ref{F:Structure}. Each classification result is called a \emph{Flow}. A Flow contain the following information: Source IP, Destination IP, Source Port, Destination Port, Data Type. Once a flow is recieved on a network socket, the \emph{Receptor} component parses the string and notifies interested components that it has recieved it. These components then process it and present it in an appropriate format.
+
+\FIGURE{htb}
+       {images/ClientStructure.pdf}
+       {0.85}
+       {Client Structure}
+       {F:Structure}
+
+For example, there could be multiple servers deployed over the network to monitor different parts. One server could be at the edge router and two could be placed on different internal subnets. Merging the streams from the subnet servers would show total network content, while the server on the edge router would show the traffic that comes in and out of the whole network.
+
+\FIGURE{htb}
+       {images/ExampleSetup.pdf}
+       {0.80}
+       {Example Deployment Setup}
+       {F:example}
+
+Figure~\ref{F:example} shows an example of a deployed system. 
+
+\section{Plugin Architecture}
+
+The system is specially designed to allow providers to insert new processing units into the system, these units are refered to as plugins. These units would process the incoming flows and display them in a specialized way. The processing units are eliviate the burden of parsing and managing the streams from the server. Figure~\ref{F:modArch} shows the general module achitecture.
+
+\FIGURE{htb}
+       {images/ModuleStructure.pdf}
+       {0.75}
+       {Module Architecture}
+       {F:modArch}
+
+ The plugin units are responsible for providing their own flow processors, configuration managers and displays. Each module must implement the following interface:
+
+\begin{verbatim}
+public interface Module {
+    //part getters.
+    public ModularFlowProcessor getFlowPocessor();
+    public RefreshNotifier getRefreshNotifier();
+    public JComponent getJComponent();
+    public JComponent getControlComponent();
+    public String getTitle();
+    public Filter getFilter();
+			        
+    //module options
+    public boolean allowFullscreen();
+    public boolean allowFilters();
+    public boolean allowToolbar();
+    public boolean isControlSeparate();
+    public boolean isConfigSeparate();
+					    
+    //module settings
+    public void showLegend(boolean b);
+    public void showTitle(boolean b);
+    public void setStream(StreamDataSource sds);
+    
+    //properties
+    public void setProperty(String name, Object value);
+    public Object getProperty(String name);
+							        
+    //actions
+    public void start();
+    public void stop();
+    public void reset();
+}
+\end{verbatim}
+
+\section{Major Components}
+This section provides a brief description of the major components responsible for executing NABS client.
+
+\subsection{Core}
+These component do not interact with the GUI, and are not even aware of its existance. They are responsible for maintaining the client state and processing the data.
+
+\subsubsection{Config}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.config.Config
+\item \emph{Purpose:} Provides a storage facility for any type of settings. A wrapper for the XML settings files. All GUI and Core components must go through this in order to load and save their setting infomation.
+\end{itemize}
+
+\subsubsection{Data Manager}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.core.DataManager, eunomia.core.charter.DataEventThread
+\item \emph{Purpose:} Notifies other componets at a particular time interval.
+\item Future existance is questionable.
+\end{itemize}
+
+\subsubsection{Database Manager}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.core.managers.DatabaseManager, eunomia.core.data.staticData.Database
+\item \emph{Purpose:} Allows addition, removal and change of database settings.
+\end{itemize}
+
+\subsubsection{Stream Manager}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.core.managers.StreamManager
+\item \emph{Purpose:} Allowes addition, removal and change of stream (Receptors). Ensures that stream combinations are maintained.
+\end{itemize}
+
+\subsubsection{Flow}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.core.data.Flow
+\item \emph{Purpose:} Represents a flow. Reads (and writes) the data into itself for an input stream. Used as the most basic building block.
+\end{itemize}
+
+\subsubsection{Filter}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.core.data.Filter
+\item \emph{Purpose:} Indicates whather or not some flow is with some range. It's a filter.
+\end{itemize}
+
+\subsubsection{Static Data Source}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.core.data.staticData
+\item \emph{Purpose:} Collects inforamtion from database.
+\item Future existance is questionable.
+\end{itemize}
+
+\subsubsection{Raw Nabs Client (Receptor)}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.core.data.streamData.client.RawNabsClient
+\item \emph{Purpose:} Accepts flows from the server on a socket or other receptors and notifies other components about them.
+\end{itemize}
+
+\subsubsection{Stream Data Source}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.core.data.streamData.StreamDataSource
+\item \emph{Purpose:} A higher level representation of the Receptor. Maintains the configuration.
+\end{itemize}
+
+\subsection{GUI}
+
+\subsubsection{Terminal Manager}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.gui.archival.TerminalManager, eunomia.gui.archival.DatabaseTerminal
+\item \emph{Purpose:} Keeps of track of currently running open database terminals, opens new terminals on request.
+\end{itemize}
+
+\subsubsection{Database Configuration}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.gui.archival.DatabaseManagerGUI
+\item \emph{Purpose:} Front end interface for the Database Manager.
+\end{itemize}
+
+\subsubsection{Module Portal}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.gui.module.ModulePortal
+\item \emph{Purpose:} A visual wrapper for a module which allows the user to issue commands to the Module.
+\end{itemize}
+
+\subsubsection{Realtime Frame}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.gui.realtime.RealtimeFrame, eunomia.gui.realtime.RealtimePanel
+\item \emph{Purpose:} Provides a window for displaying modules for each receptor.
+\end{itemize}
+
+\subsubsection{Stream Configuration}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.gui.realtime.StreamServerManager
+\item \emph{Purpose:} Front end interface for the StreamManager.
+\end{itemize}
+
+\subsubsection{Filter Editor}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.gui.FilterEditor
+\item \emph{Purpose:} Singleton class which allows users to edit any flow filter.
+\end{itemize}
+
+\subsubsection{Main GUI}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.gui.MainGUI
+\item \emph{Purpose:} Executes every GUI component, maintains a desktop-like environment.
+\end{itemize}
+
+\subsection{Util}
+
+General purpose utilities, and rogue functions.
+
+\subsubsection{Host Resolver}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.util.HostResolver
+\item \emph{Purpose:} A component where any class can submit a requst for an IP to be resolved and obtain a responce later.
+\end{itemize}
+
+\subsubsection{Util}
+\begin{itemize}
+\item \emph{Selected classes:} eunomia.util.Util
+\item \emph{Purpose:} Random static function.
+\end{itemize}
+
+\section{Modules}
+
+The following are the modules currently implemeted by the client and provided by default.
+
+\subsection{Host View}
+
+Singles out a host and provides information about it (Connections, Data distribution, Rates, etc).
+
+\subsection{Loossy Histogram}
+
+Generates a graph of top most active hosts using the Lossy Counting algorimth. It provides the data distribution for each host.
+
+\subsection{Pie Chart}
+
+Provides a Pie Chart display to show all the data types that it has seen.
+
+\subsection{Stream Status}
+
+Keeps a record of how much has passes though it: Total Data, Current Data Rate, Total Flows, Current Flow Rate.
+
+\end{document}

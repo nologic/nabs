@@ -1,0 +1,420 @@
+Oct 28, 2007 1:57:00 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 1:57:00 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 1:57:37 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 1:58:43 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 1:58:43 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 1:59:52 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 1:59:56 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 1:59:56 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 2:01:20 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 2:01:23 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 2:01:23 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 2:01:45 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 2:02:04 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 2:02:04 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 2:51:11 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 2:54:56 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 2:54:56 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 2:55:24 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 2:56:36 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 2:56:36 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 2:58:22 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 3:12:36 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 3:12:36 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 3:13:26 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 3:16:50 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 3:16:50 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 3:17:53 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 3:20:09 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 3:20:09 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 3:24:53 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 3:28:41 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 3:28:41 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 3:28:47 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 3:29:51 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 3:29:51 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 3:31:18 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 3:33:18 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 3:33:18 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 3:33:36 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 3:34:02 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 3:34:02 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 3:35:23 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 3:45:09 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 3:45:09 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 3:46:58 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 3:50:43 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 3:50:43 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 3:51:15 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 3:52:55 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 3:52:55 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 3:53:18 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 3:58:18 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 3:58:18 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 3:58:38 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 3:59:03 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 3:59:03 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 3:59:33 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 4:02:52 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 4:02:52 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 4:03:08 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 4:04:11 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 4:04:11 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 4:06:08 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 4:36:56 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 4:36:56 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 4:37:32 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 4:39:22 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 4:39:22 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 4:39:42 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 4:40:21 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 4:40:21 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 4:40:36 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 4:41:12 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 4:41:12 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 4:42:01 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 4:42:03 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 4:42:03 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 4:42:27 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 4:47:19 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 4:47:19 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 4:54:58 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 4:55:07 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 4:55:07 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 4:55:25 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 4:57:06 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 4:57:06 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 5:07:56 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 5:08:00 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 5:08:00 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 5:11:10 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 5:11:13 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 5:11:13 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 5:11:29 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 5:29:24 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 5:29:24 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 5:29:56 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 5:35:50 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 5:35:50 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 5:40:43 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 5:40:45 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 5:40:45 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 5:49:12 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 5:49:37 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 5:49:37 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 5:49:51 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 5:50:10 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 5:50:10 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 5:50:29 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 5:52:23 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 5:52:23 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 5:53:08 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 5:53:19 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 5:53:19 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 5:55:42 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 5:55:44 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 5:55:44 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 5:56:01 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 6:43:45 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 6:43:45 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 6:44:12 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 6:47:27 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 6:47:27 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 6:47:53 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 6:49:14 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 6:49:14 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 7:11:03 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 7:11:06 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 7:11:06 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 7:11:23 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 7:11:50 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 7:11:50 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 7:12:15 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 7:12:49 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 7:12:49 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 7:13:33 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 7:13:37 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 7:13:37 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 7:34:10 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 7:34:14 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 7:34:14 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 7:39:38 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 8:01:34 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 8:01:34 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 8:19:05 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 8:19:08 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 8:19:08 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 8:19:46 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 8:21:36 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 8:21:36 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 8:33:20 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 8:33:22 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 8:33:22 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 9:17:50 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 9:17:52 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 9:17:52 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 9:27:14 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 10:14:30 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 10:14:30 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 10:18:12 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 10:30:10 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 10:30:10 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 10:32:21 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 10:32:23 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 10:32:23 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 10:33:17 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 10:33:58 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 10:33:58 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 10:41:20 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 10:41:45 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 10:41:45 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 10:48:16 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 10:48:49 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 10:48:49 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 10:49:27 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 10:50:05 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 10:50:05 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 10:51:46 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 10:52:10 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 10:52:10 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 10:52:48 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 10:53:20 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 10:53:20 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 10:54:46 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 11:04:00 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 11:04:00 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 11:32:36 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 11:33:15 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 11:33:15 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 11:34:25 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 11:38:09 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 11:38:09 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 11:38:43 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 11:45:16 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 11:45:16 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 11:46:03 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 11:47:52 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 11:47:52 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 11:48:18 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 11:53:06 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 11:53:06 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 11:55:11 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 11:55:12 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 11:55:12 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 11:55:45 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 11:57:32 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 11:57:32 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 11:58:09 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
+Oct 28, 2007 11:58:55 PM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 28, 2007 11:58:55 PM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 28, 2007 11:59:33 PM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters

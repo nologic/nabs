@@ -1,0 +1,288 @@
+/*
+ * BatchProcessor.java
+ *
+ * Created on April 6, 2008, 2:11 PM
+ *
+ */
+
+package eunomia.module.receptor.proc.rtCollect;
+
+import com.vivic.eunomia.sys.util.Util;
+import eunomia.module.receptor.libb.imsCore.net.Network;
+import eunomia.module.receptor.libb.imsCore.net.NetworkChannel;
+import eunomia.module.receptor.libb.imsCore.net.NetworkChannelFlowID;
+import eunomia.module.receptor.libb.imsCore.net.NetworkChannelKey;
+import eunomia.module.receptor.libb.imsCore.net.NetworkEntity;
+import eunomia.module.receptor.libb.imsCore.net.NetworkEntityKey;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ *
+ * @author Mikhail Sosonkin
+ */
+public class BatchProcessor implements Runnable {
+    private OutputStream chanStore;
+    private OutputStream srcStore;
+    private OutputStream dstStore;
+    
+    private byte[] chanBuffer;
+    private byte[] srcBuffer;
+    private byte[] dstBuffer;
+    
+    private Network net;
+    private FileManager fman;
+    
+    public BatchProcessor(Network net) {
+        this.net = net;
+        fman = new FileManager(this);
+        
+        chanBuffer = new byte[0];
+        srcBuffer = new byte[0];
+        dstBuffer = new byte[0];
+        
+        Thread thread = new Thread(this);
+        thread.start();
+    }
+    
+    public void addFlow(NetworkChannel chan, NetworkEntity src, NetworkEntity dst) throws IOException {
+        int size;
+        
+        if(fman.addedFlow()) {
+            chanStore = fman.getChannelStore();
+            srcStore = fman.getSourceStore();
+            dstStore = fman.getDestinationStore();
+        }
+        
+        size = chan.getByteSize();
+        if(size > chanBuffer.length) {
+            chanBuffer = new byte[size];
+        }
+        chan.serialize(chanBuffer, 0);
+        chanStore.write(chanBuffer, 0, size);
+
+        size = src.getByteSize();
+        if(size > srcBuffer.length) {
+            srcBuffer = new byte[size];
+        }
+        src.serialize(srcBuffer, 0);
+        srcStore.write(srcBuffer, 0, size);
+        
+        size = dst.getByteSize();
+        if(size > dstBuffer.length) {
+            dstBuffer = new byte[size];
+        }
+        dst.serialize(dstBuffer, 0);
+        dstStore.write(dstBuffer, 0, size);
+    }
+    
+    private int processHost(Map map, NetworkEntity b_ent, InputStream in) throws IOException {
+        int processed = 0;
+        byte[] hostBuff = new byte[b_ent.getByteSize()];
+        
+        while(in.available() > 0) {
+            ++processed;
+            boolean cloned = false;
+
+            in.read(hostBuff);
+            b_ent.unserialize(hostBuff, 0);
+
+            NetworkEntity ent = (NetworkEntity) map.get(b_ent.getEntityKey());
+            if(ent == null) {
+                ent = net.getEntity(b_ent.getEntityKey());
+
+                if(ent == null) {
+                    ent = b_ent.clone();
+                    cloned = true;
+                }
+
+                map.put(ent.getEntityKey(), ent);
+            }
+
+            if(!cloned) {
+                ent.setLastActivity(b_ent.getLastActivity());
+                ent.setStartActivity(b_ent.getStartActivity());
+                ent.addContent(b_ent.getDataSent(), b_ent.getDataReceived(), b_ent.getContentSent(), b_ent.getContentReceived());
+            }
+        }
+        
+        return processed;
+    }
+
+    public void run() {
+        Map hostsMap;
+        Map chansMap;
+
+        hostsMap = new HashMap();
+        chansMap = new HashMap();
+        
+        NetworkChannelFlowID flowId;
+        NetworkChannel bChan;
+        NetworkEntity bEnt;
+        NetworkEntity bDstEnt;
+
+        bChan = new NetworkChannel(null);
+        bEnt = new NetworkEntity(null);
+        flowId = new NetworkChannelFlowID();
+        flowId.setKey(new NetworkEntityKey(), new NetworkEntityKey(), 0, 0, 0);
+        bChan.setFlowID(flowId);
+        bChan.setKey(new NetworkChannelKey(-1));
+        
+        FileSet set;
+
+        while(true) {
+            set = fman.getNextProc();
+            if(set == null) {
+                Util.threadSleep(3000);
+                
+                continue;
+            }
+            
+            hostsMap.clear();
+            
+            long time = System.currentTimeMillis();
+            long processed = 0;
+            
+            try {
+                InputStream hostIn = new BufferedInputStream(new FileInputStream(set.srcFile), 65535);
+                processed += processHost(hostsMap, bEnt, hostIn);
+                hostIn.close();
+                
+                //byte[] hostBuff = new byte[bEnt.getByteSize()];
+                /*while(hostIn.available() > 0) {
+                    processed++;
+                    boolean cloned = false;
+                    
+                    hostIn.read(hostBuff);
+                    bEnt.unserialize(hostBuff, 0);
+                    
+                    NetworkEntity ent = (NetworkEntity) hostsMap.get(bEnt.getEntityKey());
+                    if(ent == null) {
+                        ent = net.getEntity(bEnt.getEntityKey());
+                        
+                        if(ent == null) {
+                            ent = bEnt.clone();
+                            cloned = true;
+                        }
+                        
+                        hostsMap.put(ent.getEntityKey(), ent);
+                    }
+
+                    if(!cloned) {
+                        ent.setLastActivity(bEnt.getLastActivity());
+                        ent.setStartActivity(bEnt.getStartActivity());
+                        ent.addContent(bEnt.getDataSent(), bEnt.getDataReceived(), bEnt.getContentSent(), bEnt.getContentReceived());
+                    }
+                }*/
+                
+                
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            
+            try {
+                InputStream hostIn = new BufferedInputStream(new FileInputStream(set.dstFile), 65535);
+                processed += processHost(hostsMap, bEnt, hostIn);
+                hostIn.close();
+
+                /*byte[] hostBuff = new byte[bEnt.getByteSize()];
+                
+                while(hostIn.available() > 0) {
+                    processed++;
+                    boolean cloned = false;
+                    
+                    hostIn.read(hostBuff);
+                    bEnt.unserialize(hostBuff, 0);
+                    
+                    NetworkEntity ent = (NetworkEntity) hostsMap.get(bEnt.getEntityKey());
+                    if(ent == null) {
+                        ent = net.getEntity(bEnt.getEntityKey());
+                        
+                        if(ent == null) {
+                            ent = bEnt.clone();
+                            cloned = true;
+                        }
+                        
+                        hostsMap.put(ent.getEntityKey(), ent);
+                    }
+
+                    if(!cloned) {
+                        ent.setLastActivity(bEnt.getLastActivity());
+                        ent.setStartActivity(bEnt.getStartActivity());
+                        ent.addContent(bEnt.getDataSent(), bEnt.getDataReceived(), bEnt.getContentSent(), bEnt.getContentReceived());
+                    }
+                }
+                
+                hostIn.close();*/
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            
+            long channels = 0;
+            try {
+                byte[] bChanBuff = new byte[bChan.getByteSize()];
+                InputStream chanIn = new BufferedInputStream(new FileInputStream(set.chFile), 65535);
+                
+                while(chanIn.available() > 0) {
+                    channels++;
+                    boolean cloned = false;
+                    
+                    chanIn.read(bChanBuff);
+                    bChan.unserialize(bChanBuff, 0);
+                    bChan.getChannelKey().setNum(-1);
+                    
+                    NetworkChannelFlowID fid = bChan.getChannelFlowID();
+                    
+                    NetworkChannel chan = (NetworkChannel) chansMap.get(fid);
+                    if(chan == null) {
+                        // swap and search again.
+                        fid.setKey(fid.getDestinationEntity(), fid.getSourceEntity(), fid.getDestinationPort(), fid.getSourcePort(), fid.getProtocol());
+                    
+                        chan = (NetworkChannel) chansMap.get(fid);
+                        if(chan == null) {
+                            // Swap back
+                            chan = net.getChannel(fid.getDestinationEntity().getIPv4(), fid.getSourceEntity().getIPv4(), fid.getDestinationPort(), fid.getSourcePort(), fid.getProtocol());
+
+                            if(chan == null) {
+                                chan = bChan.clone();
+                                cloned = true;
+                            }
+
+                            chansMap.put(chan.getChannelFlowID(), chan);
+                        }
+                    }
+
+                    if(!cloned) {
+                        chan.setMax_packet_size(bChan.getMax_packet_size());
+                        chan.setMin_packet_size(bChan.getMin_packet_size());
+                        chan.addByteCount(bChan.getByteCount());
+                        chan.addContent(bChan.getContent());
+                        chan.addHistogram(bChan.getHistogram());
+                        chan.addTcpFlags(bChan.getTcpFlags());
+                        chan.addPacketCount(bChan.getPacketCount());
+                        chan.setLastActivity(bChan.getLastActivity());
+                        chan.setStartActivity(bChan.getStartActivity());
+                        chan.addOccurences(bChan.getOccurences());
+                    }
+                }
+                
+                chanIn.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            
+            net.addChannels((NetworkChannel[])chansMap.values().toArray(new NetworkChannel[0]));
+            net.addHosts((NetworkEntity[])hostsMap.values().toArray(new NetworkEntity[0]));
+            
+            System.out.println("Chans: " + chansMap.size() + "/" + channels);
+            System.out.println("Hosts: " + hostsMap.size() + "/" + processed + "\n took: " + (System.currentTimeMillis() - time));
+            fman.addDelete(set);
+        }
+    }
+}
+

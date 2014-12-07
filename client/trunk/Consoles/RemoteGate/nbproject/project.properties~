@@ -1,0 +1,104 @@
+build.classes.dir=${build.web.dir}/WEB-INF/classes
+build.classes.excludes=**/*.java,**/*.form
+build.dir=build
+build.generated.dir=${build.dir}/generated
+build.test.classes.dir=${build.dir}/test/classes
+build.test.results.dir=${build.dir}/test/results
+build.web.dir=${build.dir}/web
+build.web.excludes=${build.classes.excludes}
+client.urlPart=
+compile.jsps=false
+conf.dir=${source.root}/conf
+debug.classpath=${javac.classpath}:${build.classes.dir}:${j2ee.platform.classpath}
+debug.test.classpath=\
+    ${run.test.classpath}
+display.browser=true
+dist.dir=dist
+dist.ear.war=${dist.dir}/${war.ear.name}
+dist.javadoc.dir=${dist.dir}/javadoc
+dist.war=${dist.dir}/${war.name}
+file.reference.bsh-classgen-2.0b4.jar=../../../shared/libraries/bsh-classgen-2.0b4.jar
+file.reference.bsh-classpath-2.0b4.jar=../../../shared/libraries/bsh-classpath-2.0b4.jar
+file.reference.bsh-commands-2.0b4.jar=../../../shared/libraries/bsh-commands-2.0b4.jar
+file.reference.bsh-core-2.0b4.jar=../../../shared/libraries/bsh-core-2.0b4.jar
+file.reference.bsh-util-2.0b4.jar=../../../shared/libraries/bsh-util-2.0b4.jar
+file.reference.jcommon-1.0.10.jar=../../../shared/libraries/jcommon-1.0.10.jar
+file.reference.jcommon-xml-1.0.8.jar=../../../shared/libraries/jcommon-xml-1.0.8.jar
+file.reference.je-3.2.44.jar=../../../shared/libraries/je-3.2.44.jar
+file.reference.jfreechart-1.0.5.jar=../../../shared/libraries/jfreechart-1.0.5.jar
+file.reference.log4j-1.2.14.jar=../../../shared/libraries/log4j-1.2.14.jar
+file.reference.mysql-connector-java-3.1.10-bin.jar=../../../shared/libraries/mysql-connector-java-3.1.10-bin.jar
+file.reference.postgresql-8.2-504.jdbc3.jar=../../../shared/libraries/postgresql-8.2-504.jdbc3.jar
+file.reference.servlet-api.jar=servlet-api.jar
+j2ee.platform=1.4
+j2ee.server.type=Tomcat55
+jar.compress=false
+javac.classpath=\
+    ${reference.ModuleInterfaces.jar}:\
+    ${reference.Config.jar}:\
+    ${reference.Messages.jar}:\
+    ${reference.NabsClient_LIB_.jar}:\
+    ${file.reference.bsh-classgen-2.0b4.jar}:\
+    ${file.reference.bsh-classpath-2.0b4.jar}:\
+    ${file.reference.bsh-commands-2.0b4.jar}:\
+    ${file.reference.bsh-core-2.0b4.jar}:\
+    ${file.reference.bsh-util-2.0b4.jar}:\
+    ${file.reference.jcommon-1.0.10.jar}:\
+    ${file.reference.jcommon-xml-1.0.8.jar}:\
+    ${file.reference.je-3.2.44.jar}:\
+    ${file.reference.jfreechart-1.0.5.jar}:\
+    ${file.reference.log4j-1.2.14.jar}:\
+    ${file.reference.mysql-connector-java-3.1.10-bin.jar}:\
+    ${file.reference.postgresql-8.2-504.jdbc3.jar}:\
+    ${reference.utilities.jar}:\
+    ${file.reference.servlet-api.jar}
+# Space-separated list of extra javac options
+javac.compilerargs=
+javac.debug=true
+javac.deprecation=false
+javac.source=1.5
+javac.target=1.5
+javac.test.classpath=\
+    ${javac.classpath}:\
+    ${build.classes.dir}:\
+    ${libs.junit.classpath}
+javadoc.additionalparam=
+javadoc.author=false
+javadoc.encoding=
+javadoc.noindex=false
+javadoc.nonavbar=false
+javadoc.notree=false
+javadoc.preview=true
+javadoc.private=false
+javadoc.splitindex=true
+javadoc.use=true
+javadoc.version=false
+javadoc.windowtitle=
+jspcompilation.classpath=${jspc.classpath}:${javac.classpath}
+lib.dir=${web.docbase.dir}/WEB-INF/lib
+platform.active=default_platform
+project.Config=../../../shared/config
+project.Messages=../../../shared/messages
+project.ModuleInterfaces=../../../shared/ModuleInterfaces
+project.NabsClient_LIB_=../../../front-end(lib)
+project.utilities=../../../shared/utilities
+reference.Config.jar=${project.Config}/dist/Config.jar
+reference.Messages.jar=${project.Messages}/dist/Messages.jar
+reference.ModuleInterfaces.jar=${project.ModuleInterfaces}/dist/ModuleInterfaces.jar
+reference.NabsClient_LIB_.jar=${project.NabsClient_LIB_}/dist/NabsClient_LIB_.jar
+reference.utilities.jar=${project.utilities}/dist/utilities.jar
+resource.dir=setup
+run.test.classpath=\
+    ${javac.test.classpath}:\
+    ${build.test.classes.dir}
+# Space-separated list of JVM arguments used when running class with main method
+# (you may also define separate properties like run-sys-prop.name=value instead of -Dname=value):
+runmain.jvmargs=
+source.root=src
+src.dir=${source.root}/java
+war.content.additional=
+war.ear.name=RemoteGate.war
+war.name=RemoteGate.war
+war.package=true
+web.docbase.dir=web
+webinf.dir=web/WEB-INF

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/core/charter/Charter.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/core/charter/DataEventNotifier.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/core/charter/DataEventThread.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/core/data/staticData/exporter/CSVExporter.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/core/data/streamData/StreamDataSource.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/core/managers/StreamManager.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/gui/FilterEditor.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/gui/MainGui.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/gui/archival/DatabaseManagerGUI.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/gui/archival/TerminalManager.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/gui/module/ModulePortal.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/gui/realtime/RealtimeFrame.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/gui/realtime/RealtimePanel.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/plugin/alg/LossyCounter.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/plugin/hostView/ConnectionsTable.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/plugin/hostView/ConversationList.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/plugin/hostView/DetailedView.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/plugin/hostView/DetailsFrame.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/plugin/hostView/Host.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/plugin/hostView/HostData.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/plugin/hostView/HostView.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/plugin/lossyHistogram/HistogramController.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/plugin/lossyHistogram/LossyHistogramModule.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/plugin/pieChart/PieChartModule.java</file>
+        <file>file:/home/mike/nabs/eunomia/client/src/eunomia/util/HostResolver.java</file>
+    </open-files>
+</project-private>

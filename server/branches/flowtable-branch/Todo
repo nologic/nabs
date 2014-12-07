@@ -1,0 +1,32 @@
+Pending Tasks:
+==============
+
+Source Cleanup:
+ - Move all global config stuff to eunomia_config.h
+ - Sensor should generate stats periodically (for each time-slot keep)
+ 	- flows dropped, flows in memory, flows flushed
+	- packets processed, packets dropped
+ - Configuration file for everything!
+	
+Classification:
+ - Can we improve the feature computation code
+ 	* online computation?
+
+Flow Table:
+ - Payload Buffer Pool:
+ 	* some flows may have flow_content record sans payload buffer (See below)
+ - Better Buffer Reuse Policy:
+	* Makes no sense to buffer flows that wont fillup MAX_PAYLOAD before ACTIVE_TIMEOUT is reached
+	* Give that buffer to someone else who actually needs it.
+ - Flowtable can have flow_content records upto send buffer's flow_record count
+ 	* Basically can create flow_content as long as send buffer grants us a flow_record
+
+Send Buffer:
+ - Min-Max Send Buffer Policy:
+ 	* minimize system call overhead, maximize through-put 
+	* bitset based send-buffer implementation
+
+Completed Tasks:
+================
+ - Include the latest SVM code from libsvm
+

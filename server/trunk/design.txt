@@ -1,0 +1,201 @@
+Design of Mini Me
+==================
+flow-table will be a hash table of the following structure
+
+struct flow_content{
+
+	struct list_head list;
+	unsigned char flow_status; //inserting|finished|flush_ready|classifying|classified|appiding|appided
+	char flowid[12];
+	struct time_val start_time;
+	struct time_val end_time;
+	pthread_mutex_t flow_lock;
+	//-------------[flow region]-------------------
+
+	char* payload;
+	int payload_len;
+	unsigned int toc[8]; //byte of each type of content
+	pthread_mutex_t payload_lock;
+	//-------------[payload region]-------------------
+
+	struct app_packets[5];	// first 5 packets with data
+	int n_pkts;
+	short int toa;	//type of application
+	short int mjv;	// major version
+	short int mnv;	// minor version
+	pthread_mutex_t	app_lock;
+	//-------------[app region]--------------------
+
+	unsigned int total_bytes;
+	unsigned int total_pkts;
+	unsigned int frag_pkts;
+	unsigned int max_pkt_size;
+	unsigned int min_pkt_size;
+	unsigned short int max_ttl;
+	unsigned short int min_ttl;
+	unsigned short int tos;
+	unsigned int tcp_syns;
+	unsigned int tcp_acks;
+	unsigned int tcp_fins;
+	unsigned int tcp_rsts;
+	unsigned int tcp_urgs;
+	unsigned int tcp_push;
+	pthread_mutex_t stats_lock;
+	//-------------[stats region]--------------------
+};
+
+
+
+function insert_packets(){
+
+	if(flow found){
+		lock(flow_lock);
+			if(flow_status == flush_ready){
+				unlock(flow_lock);
+				return;
+			}
+		flow_status= inserting;
+		update times();
+		unlock(flow_lock);
+
+		lock(stats_lock);
+			update_stats();
+		unlock(stats_lock);
+
+		lock(payload_lock);
+			if(flow_status != classifiying)
+				update_payload();
+		unlock(payload_lock);
+
+		lock(app_lock);
+			if(flow_status != appiding)
+				update_app();
+		unlock(app_lock);
+
+		if(packet is FIN or RST){
+			lock(flow_lock);
+				flow_status= finished;
+				flow_status= !inserting;
+			unlock(flow_lock);
+			return;
+		}
+
+		lock(flow_lock);
+			flow_status= !inserting;
+		unlock(flow_lock);
+		return;
+	}
+
+	get_flow_content_from_free_list();
+	create_flowid();
+	update_times();
+	update_stats();
+	update_payload();
+	update_app();
+	insert_into_flowtable();
+}
+
+function svm_classifier(){
+
+	for_each_flow_content(in flow_table){
+		lock(flow_lock);
+			if(flow_status == flush_ready){
+				unlock(flow_lock);
+				return;
+			}
+		lock(payload_lock);
+			if(payload_len >= MAX_PAYLOAD)
+				flow_status= classifiying;
+				unlock(payload_lock);
+				unlock(flow_lock);
+			else{
+				unlock(payload_lock);
+				unlock(flow_lock);
+				continue
+			}
+
+		classify_flow();
+		update_payload();
+		lock(payload_lock);
+			flow_status= classified;
+			flow_status= !classifying;
+		unlock(payload_lock);
+	}
+}
+
+function app_classifier(){
+
+	for_each_flow_content(in flow_table){
+		lock(flow_lock);
+			if(flow_status == flush_ready or appided){
+				unlock(flow_lock);
+				return;
+			}
+		lock(app_lock);
+			if(enough_app_packets)
+				app_status= appiding;
+				unlock(app_lock);
+				unlock(flow_lock);
+			else{
+				unlock(app_lock);
+				unlock(flow_lock);
+				continue
+			}
+
+		app_id_flow();
+		lock(app_lock);
+		flow_status= appided;
+		flow_status= !appiding;
+		unlock(app_lock);
+	}
+}
+
+function garbage_collector(){
+
+	for_each_flow_content(in flow_table){
+		if(flow_status == flush_ready){
+			remove_from_flow_table();
+			write_to_output_buffer();
+			add_to_free_list();
+			continue;
+		} 
+		
+		lock(flow_lock);
+		if(flow_status != inserting){
+
+			if(flow_status == finished){
+				flow_status= flush_ready;
+				remove_from_flow_table();
+				write_to_output_buffer();
+				add_to_free_list();
+				unlock(flow_lock);
+				continue;
+			} 
+
+			if((current_time - start_time) > TIMEOUT){
+				flow_status= flush_ready;
+				unlock(flow_lock);
+
+				write_to_output_buffer();
+				reset_flow_content();	//if appided do not unset appided
+				set_new_start_time();
+
+				lock(flow_lock);
+				flow_status = !flush_ready;
+				unlock(flow_lock);
+				continue;
+			}
+
+			if((current_time - end_time) > IDLE_TIME){
+				flow_status= flush_ready;
+				unlock(flow_lock);
+
+				remove_from_flow_table();
+				write_to_output_buffer();
+				add_to_free_list();
+				continue;
+			}
+		}
+		unlock(flow_lock);
+	}
+}

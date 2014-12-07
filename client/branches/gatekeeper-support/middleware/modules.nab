@@ -1,0 +1,18 @@
+# Modules defition file.
+..\modules\NetworkPolicy\dist\NetworkPolicy.jar
+..\modules\streamStatus\dist\streamStatus.jar
+..\modules\lossyHistogram\dist\lossyHistogram.jar
+..\modules\CustomerFeedback\dist\CustomerFeedback.jar
+..\modules\pieChart\dist\pieChart.jar
+..\modules\hostView\dist\hostView.jar
+..\modules\hostDetails\dist\hostDetails.jar
+#..\modules\RecordCounter\dist\RecordCounter.jar 
+..\modules\NABFlowV2Collector\dist\NABFlowV2Collector.jar
+#F:\NABS\src\client\trunk\modules\NABFlowCollector\dist\NABFlowCollector.jar
+#F:\trinetra\products\nabs\client\trunk\modules\netFlow\dist\NetFlow.jar
+..\modules\Atas\dist\Atas.jar
+..\modules\NetworkStatus\dist\NetworkStatus.jar
+..\modules\NABFlow\dist\NABFlow.jar
+..\modules\NABFlowV2\dist\NABFlowV2.jar
+..\shared\libraries\jcommon-1.0.10.jar
+..\shared\libraries\jfreechart-1.0.5.jar

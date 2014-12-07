@@ -1,0 +1,232 @@
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.ContextListener'
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.StandardContext listenerStart
+FINE:  Configuring event listener class 'listeners.SessionListener'
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Compression Filter'
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Path Mapped Filter'
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Servlet Mapped Filter'
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Set Character Encoding'
+Oct 29, 2007 12:00:05 AM org.apache.catalina.core.StandardContext filterStart
+FINE:  Starting filter 'Request Dumper Filter'
+Oct 29, 2007 12:00:06 AM org.apache.catalina.core.StandardContext listenerStart
+FINE: Sending application start events
+Oct 29, 2007 12:00:06 AM org.apache.catalina.core.StandardContext filterStart
+FINE: Starting filters
+Oct 29, 2007 12:02:06 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet ModulePortal threw exception
+java.util.ConcurrentModificationException
+	at java.util.AbstractList$Itr.checkForComodification(AbstractList.java:372)
+	at java.util.AbstractList$Itr.next(AbstractList.java:343)
+	at org.jfree.chart.block.BlockContainer.draw(BlockContainer.java:223)
+	at org.jfree.chart.title.LegendTitle.draw(LegendTitle.java:521)
+	at org.jfree.chart.JFreeChart.drawTitle(JFreeChart.java:1273)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1161)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1061)
+	at eunomia.plugin.gui.lossyHistogram.Main.getProperty(Main.java:411)
+	at eunomia.module.ProcFrontendModule.getProperty(ProcFrontendModule.java:124)
+	at eunomia.web.ModulePortal.processRequest(ModulePortal.java:46)
+	at eunomia.web.ModulePortal.doGet(ModulePortal.java:88)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:690)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Thread.java:619)
+Oct 29, 2007 12:02:06 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet ModulePortal threw exception
+java.util.ConcurrentModificationException
+	at java.util.AbstractList$Itr.checkForComodification(AbstractList.java:372)
+	at java.util.AbstractList$Itr.next(AbstractList.java:343)
+	at org.jfree.chart.block.BlockContainer.draw(BlockContainer.java:223)
+	at org.jfree.chart.title.LegendTitle.draw(LegendTitle.java:521)
+	at org.jfree.chart.JFreeChart.drawTitle(JFreeChart.java:1273)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1161)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1061)
+	at eunomia.plugin.gui.lossyHistogram.Main.getProperty(Main.java:411)
+	at eunomia.module.ProcFrontendModule.getProperty(ProcFrontendModule.java:124)
+	at eunomia.web.ModulePortal.processRequest(ModulePortal.java:46)
+	at eunomia.web.ModulePortal.doGet(ModulePortal.java:88)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:690)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Thread.java:619)
+Oct 29, 2007 12:02:06 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet ModulePortal threw exception
+java.util.ConcurrentModificationException
+	at java.util.AbstractList$Itr.checkForComodification(AbstractList.java:372)
+	at java.util.AbstractList$Itr.next(AbstractList.java:343)
+	at org.jfree.chart.block.BlockContainer.draw(BlockContainer.java:223)
+	at org.jfree.chart.title.LegendTitle.draw(LegendTitle.java:521)
+	at org.jfree.chart.JFreeChart.drawTitle(JFreeChart.java:1273)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1161)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1061)
+	at eunomia.plugin.gui.lossyHistogram.Main.getProperty(Main.java:411)
+	at eunomia.module.ProcFrontendModule.getProperty(ProcFrontendModule.java:124)
+	at eunomia.web.ModulePortal.processRequest(ModulePortal.java:46)
+	at eunomia.web.ModulePortal.doGet(ModulePortal.java:88)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:690)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Thread.java:619)
+Oct 29, 2007 12:02:06 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet ModulePortal threw exception
+java.util.ConcurrentModificationException
+	at java.util.AbstractList$Itr.checkForComodification(AbstractList.java:372)
+	at java.util.AbstractList$Itr.next(AbstractList.java:343)
+	at org.jfree.chart.block.BlockContainer.draw(BlockContainer.java:223)
+	at org.jfree.chart.title.LegendTitle.draw(LegendTitle.java:521)
+	at org.jfree.chart.JFreeChart.drawTitle(JFreeChart.java:1273)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1161)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1061)
+	at eunomia.plugin.gui.lossyHistogram.Main.getProperty(Main.java:411)
+	at eunomia.module.ProcFrontendModule.getProperty(ProcFrontendModule.java:124)
+	at eunomia.web.ModulePortal.processRequest(ModulePortal.java:46)
+	at eunomia.web.ModulePortal.doGet(ModulePortal.java:88)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:690)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Thread.java:619)
+Oct 29, 2007 12:02:06 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet ModulePortal threw exception
+java.util.ConcurrentModificationException
+	at java.util.AbstractList$Itr.checkForComodification(AbstractList.java:372)
+	at java.util.AbstractList$Itr.next(AbstractList.java:343)
+	at org.jfree.chart.block.BlockContainer.draw(BlockContainer.java:223)
+	at org.jfree.chart.title.LegendTitle.draw(LegendTitle.java:521)
+	at org.jfree.chart.JFreeChart.drawTitle(JFreeChart.java:1273)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1161)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1061)
+	at eunomia.plugin.gui.lossyHistogram.Main.getProperty(Main.java:411)
+	at eunomia.module.ProcFrontendModule.getProperty(ProcFrontendModule.java:124)
+	at eunomia.web.ModulePortal.processRequest(ModulePortal.java:46)
+	at eunomia.web.ModulePortal.doGet(ModulePortal.java:88)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:690)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Thread.java:619)
+Oct 29, 2007 12:02:07 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet ModulePortal threw exception
+java.util.ConcurrentModificationException
+	at java.util.AbstractList$Itr.checkForComodification(AbstractList.java:372)
+	at java.util.AbstractList$Itr.next(AbstractList.java:343)
+	at org.jfree.chart.block.BlockContainer.draw(BlockContainer.java:223)
+	at org.jfree.chart.title.LegendTitle.draw(LegendTitle.java:521)
+	at org.jfree.chart.JFreeChart.drawTitle(JFreeChart.java:1273)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1161)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1061)
+	at eunomia.plugin.gui.lossyHistogram.Main.getProperty(Main.java:411)
+	at eunomia.module.ProcFrontendModule.getProperty(ProcFrontendModule.java:124)
+	at eunomia.web.ModulePortal.processRequest(ModulePortal.java:46)
+	at eunomia.web.ModulePortal.doGet(ModulePortal.java:88)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:690)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Thread.java:619)
+Oct 29, 2007 12:02:10 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet ModulePortal threw exception
+java.util.ConcurrentModificationException
+	at java.util.AbstractList$Itr.checkForComodification(AbstractList.java:372)
+	at java.util.AbstractList$Itr.next(AbstractList.java:343)
+	at org.jfree.chart.block.BlockContainer.draw(BlockContainer.java:223)
+	at org.jfree.chart.title.LegendTitle.draw(LegendTitle.java:521)
+	at org.jfree.chart.JFreeChart.drawTitle(JFreeChart.java:1273)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1161)
+	at org.jfree.chart.JFreeChart.draw(JFreeChart.java:1061)
+	at eunomia.plugin.gui.lossyHistogram.Main.getProperty(Main.java:411)
+	at eunomia.module.ProcFrontendModule.getProperty(ProcFrontendModule.java:124)
+	at eunomia.web.ModulePortal.processRequest(ModulePortal.java:46)
+	at eunomia.web.ModulePortal.doGet(ModulePortal.java:88)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:690)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Thread.java:619)
+Oct 29, 2007 12:02:55 AM org.apache.catalina.core.StandardContext filterStop
+FINE: Stopping filters
